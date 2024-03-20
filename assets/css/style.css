@@ -55,6 +55,11 @@ body > .head > h2{
     font-weight: 550;
     text-transform: uppercase;
 }
+body > .head > h2:hover{
+    text-decoration:underline 2px rgb(247, 23, 23);
+    text-underline-offset:0.25rem;
+    cursor: pointer;
+}
 body .trending{
     width:86%;
     height:35em;
@@ -64,34 +69,59 @@ body .trending{
     border-radius:0.6rem;
     text-align: left;
     display:flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
-    justify-content: center;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
     padding-left:4.5rem;
     gap:1rem;
     box-shadow:0px 0px 1px rgb(129, 127, 127);
 }
-.trending > h3{
+.trending > .left > img{
+    margin-left:-4rem;
+    width:2.5rem;
+    border-radius:50%;
+    background-color:white;
+    box-shadow:0px 0px 1px black;
+}
+
+.trending > .text{
+    width:12rem;
+    height:20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+.trending > .right > img{
+    width:2.5rem;
+    margin-right:0.5rem;
+    border-radius:50%;
+    box-shadow:0px 0px 1px black;
+    background-color:white;
+}
+.trending h3{
     font-size:1.6rem;
     text-transform: capitalize;
     color:tomato;
     font-weight:600;
 }
-.trending > h2{
+.trending h2{
     font-size:1.95rem;
     text-transform: uppercase;
     font-weight:800;
+    color:rgb(151, 148, 148);
+    text-shadow:0px 0px 1px rgb(151, 148, 148);
 }
-.trending > p{
+.trending p{
     font-size:1.2rem;
+    text-transform: capitalize;
     font-weight: 600;
-    color:rgb(107, 93, 93);
+    color:black;
 }
-.trending > p > span{
+.trending p > span{
     font-size:1.5rem;
     font-weight:550;
 }
-.trending > button{
+.trending button{
     width:fit-content;
     padding:0.4rem;
     color: white;
@@ -101,6 +131,10 @@ body .trending{
     text-transform: uppercase;
     font-weight: 550;
     box-shadow:0px 0px 1px black;
+    transition:transform .2s ;
+}
+.trending button:hover{
+    transform:scale(1.05);
 }
 body > .categories{
     width:100%;
