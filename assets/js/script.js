@@ -1,12 +1,24 @@
 function navHead(){
     const navhead = document.querySelector('.nav-head');
-    navhead.children[0].addEventListener('click',(e)=>{
+    navhead.children[0].addEventListener('click',()=>{
         window.location.href='./index.html';
     });
 
     
 }
 navHead();
+
+//load random bannerr when website is reloaded or opened
+function loadBanner(){
+    const backgroundImg = ['banner-1.jpg','banner-2.jpg','banner-3.jpg'];
+    const index = Math.floor(Math.random()*backgroundImg.length);
+    const img = document.querySelector('.trending');
+    const styles = window.getComputedStyle(img);
+    let backImg = styles.getPropertyValue('background-image');
+    backImg=backImg.replace('name',backgroundImg[index]);
+    img.style.backgroundImage=backImg;
+}
+loadBanner()
 
 //trending banner swipe-up background
 function swipeUp(event){
