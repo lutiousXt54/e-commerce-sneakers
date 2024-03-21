@@ -268,15 +268,16 @@ body > .categories{
 .grid-container > .item2 > .item > .text > button{
     width:fit-content;
     height: fit-content;
-    background-color:rgb(243, 11, 11);
+    background-color:#e4b431;
     font-size:0.8rem;
-    color:white;
+    color:black;
     text-transform: capitalize;
     box-shadow:0px 0px 1px rgb(177, 174, 174);
     font-weight:600;
     border:none;
     border-radius:0.2rem;
     padding:0.25rem;
+    outline:none;
     transition: transform .1s;
     cursor: pointer;
 }
@@ -317,8 +318,6 @@ body > .categories{
     grid-row:3/5;
     display: flex;
     flex-direction:column;
-    /* justify-content: ;
-    align-items: ; */
     gap:0.8rem;
     padding:0.7rem;
     border:none;
@@ -336,7 +335,7 @@ body > .categories{
     gap:0.5rem;
 }
 .grid-container > .item3 > .item > .img > img{
-    width:2.5rem;
+    width:3.5rem;
 }
 .grid-container > .item3 > .item > .text{
     width:80%;
@@ -345,12 +344,14 @@ body > .categories{
     justify-content:space-around;
 }
 .grid-container > .item3 > .item > .text > h4{
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: capitalize;
     color:rgb(99, 94, 94);
 }
 .grid-container > .item3 > .item > .text > h5{
-    font-size:0.8rem;
+    font-size:1rem;
+    color:rgb(207, 38, 8);
+    font-weight:600;
     /* text-decoration: line-through; */
 }
 .grid-container > .item3 > .item > .text > h5 > span{
@@ -542,6 +543,18 @@ footer > .sec > p{
     }
     .grid-container > .item2 > .item > .text > h5{
         font-size:1rem;
+    }
+    .grid-container > .item3 > .item > .img > img{
+        width:2.5rem;
+    }
+    .grid-container > .item3 > .item > .text > h4{
+        font-size: 1rem;
+        text-transform: capitalize;
+        color:rgb(99, 94, 94);
+    }
+    .grid-container > .item3 > .item > .text > h5{
+        font-size:0.8rem;
+        /* text-decoration: line-through; */
     }
     .grid-container > .item4{
         grid-column:2/5;

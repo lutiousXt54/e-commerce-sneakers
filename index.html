@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>e-commerce store</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -328,7 +328,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -339,7 +339,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>          
           </div>
         </div>
         <div class="item">
@@ -349,7 +349,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -360,7 +360,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -370,7 +370,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -381,7 +381,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -391,7 +391,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -402,7 +402,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -412,7 +412,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -423,7 +423,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -433,7 +433,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
         <div class="item">
@@ -444,7 +444,7 @@
               jacket <br> <span>men's winter <br> leather jacket</span><br>
             </h5>
             <h6>$45.00 <s>$60.00</s></h6>
-            <button>add to card</button>
+            <button>add to cart</button>
           </div>
         </div>
       </div>
@@ -503,5 +503,17 @@
     </div>
   </footer>
   <script src="./assets/js/script.js"></script>
+  <script>
+    function loadBanner(){
+      const backgroundImg = ['banner-1.jpg','banner-2.jpg','banner-3.jpg'];
+      const index = Math.floor(Math.random()*backgroundImg.length);
+      const img = document.querySelector('.trending');
+      const styles = window.getComputedStyle(img);
+      let backImg = styles.getPropertyValue('background-image');
+      backImg=backImg.replace('name',backgroundImg[index]);
+      img.style.backgroundImage=backImg;
+    }
+    loadBanner();
+  </script>
 </body>
 </html>
