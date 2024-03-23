@@ -418,10 +418,10 @@ body > .categories{
     font-weight: 600;
     border-radius:0.2rem;
     text-transform: capitalize;
-    color:white;
+    color:black;
     padding:0.25rem;
     box-shadow:0px 0px 0.01rem rgb(224, 221, 221);
-    background-color:rgb(241, 32, 32);
+    background-color:#e4b431;
     cursor: pointer;
     transition: transform .1s;
 }
