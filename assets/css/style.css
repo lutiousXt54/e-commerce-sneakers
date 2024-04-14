@@ -166,6 +166,11 @@ header{
     }
 }
 
+@media (max-width:640px){
+    header > .categories{
+        display: none;
+    }
+}
 /* for 1310px to 1100px  */
 @media (max-width:1210px) and (min-width:936px){
     nav{
