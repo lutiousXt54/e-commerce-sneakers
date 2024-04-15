@@ -16,7 +16,7 @@ const menuFunc =()=>{
     menu.appendChild(heading);
     menu.appendChild(categories);
     if(screen.width < 490){
-        menu.insertBefore(option,menu.querySelector('.social'));
+        menu.appendChild(option);
     }
     menu.appendChild(socialMedia);
     document.body.appendChild(menu)

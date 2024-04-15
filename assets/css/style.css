@@ -1,7 +1,7 @@
 :root{
     --fontFamily:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --compWidth:90vw; /*this is for small screen from 1100px to 900px or something */
-    --compbigWidth:75vw;/* this is for big screen */
+    --compbigWidth:80vw;/* this is for big screen */
     --btnPadding:0.5rem;
     --btnBorder-radious:0.2rem;
     --card-Border-radious:0.25rem;
@@ -46,8 +46,9 @@ body{
                 border-radius:0.25rem;
             }
             img:hover{
+                background-color: rgb(245, 67, 67);
                 opacity:0.85;
-                transition: optacity width 0.2s;
+                transition: optacity width background-color 1s;
                 transform: scale(1.025);
             }
         }
@@ -145,14 +146,14 @@ header{
     flex-direction:column;
     align-items: center;
     .categories{
-        width:100%;
+        width:var(--compWidth);
         height:fit-content;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content:space-around;
         align-items: center;
-        margin-top:0 0.4rem;
+        margin:1rem 1rem;
         li{
             list-style:none;
             font-family:var(--fontFamily);
@@ -166,6 +167,63 @@ header{
             text-decoration:underline 2px rgb(238, 55, 55);
             text-underline-offset:0.25rem;
             transition: text-decoration transform 1s;
+        }
+    }
+}
+.banner{
+    width:var(--compWidth);
+    display: flex;
+    flex-direction: row;
+    .card{
+        width:100%;
+        position: relative;
+        img{
+            width:100%;
+            height:100%;
+            border-radius:0.2rem;
+            box-shadow:0px 0px 0px 1px rgb(236, 236, 236);
+        }
+        .text{
+            position: absolute;
+            z-index:1;
+            top:2.5vw;
+            left:5vw;
+            font-family: var(--fontFamily);
+            h3{
+                font-size:2vw;
+                text-transform:capitalize;
+                color:rgb(236, 61, 61);
+            }
+            h2{
+                font-size:3vw;
+                text-transform: uppercase;
+            }
+            div{
+                font-size:1.5vw;
+                text-transform: capitalize;
+                font-weight:600;
+                color:rgb(117, 115, 115);
+                span{
+                    font-size:2vw;
+                    color:rgb(116, 112, 112);
+                }
+            }
+            button{
+                font-size:1vw;
+                background-color:rgb(238, 55, 55);
+                border:none;
+                padding:0.5rem;
+                border-radius:0.2rem;
+                color:white;
+                font-weight:600;
+                text-transform: uppercase;
+                margin-top:1.5pc;
+            }
+            button:hover{
+                background-color:black;
+                transform:scale(1.05);
+                transition: background-color 0.25s;
+            }
         }
     }
 }
@@ -303,6 +361,43 @@ header{
     header > .categories{
         display: none;
     }
+    header > .banner{
+        margin-top:1rem;
+    }
+    header{
+        .categories{
+            display: none;
+        }
+        .banner{
+            margin-top:1rem;
+            .card > .text{
+                top:0rem;
+                h3{
+                    font-size:1rem;
+                }
+                h2{
+                    font-size:1.2rem;
+                }
+                div{
+                    font-size:0.8rem;
+                    span{
+                        font-size:1rem;
+                    }
+                }
+                button{
+                    font-size:0.7rem;
+                    padding:0.2rem;
+                    margin-top:0.5rem;
+                }
+                button:hover{
+                    background-color:red;
+                }
+                /* button:focus{
+                    background-color:black;
+                } */
+            }
+        }
+    }
 }
 
 /* for 490px to lowest pixels as possible */
@@ -343,12 +438,11 @@ header{
         }
         .categories{
             width:100%;
-            height:60%;
+            height:fit-content;
             display:flex;
             flex-direction: column;
-            /* justify-content:space-around; */
             li{
-                height:8.5%;
+                height:2.5rem;
                 list-style:none;
                 /* border:solid 1px; */
                 font-size:0.9rem;
@@ -364,12 +458,28 @@ header{
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            margin-top:-7rem;
+            margin-top:1rem;
             img{
                 width:2rem;
                 background-color: rgb(231, 231, 231);
                 padding:0.2rem;
                 border-radius:0.5rem;
+            }
+            img:hover{
+                background-color: rgb(245, 67, 67);
+                opacity:0.85;
+                transition: optacity width background-color 1s;
+                transform: scale(1.025);
+            }
+        }
+        .option{
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            margin-top:2rem;
+            gap:1rem;
+            select{
+                border-radius:0.25rem;
             }
         }
     }
@@ -407,6 +517,33 @@ header{
     header{
         .categories{
             display: none;
+        }
+        .banner{
+            width:100%;
+            margin-top:1rem;
+            .card > .text{
+                top:0;
+                h3{
+                    font-size:0.8rem;
+                }
+                h2{
+                    font-size:1rem;
+                }
+                div{
+                    font-size:0.6rem;
+                    span{
+                        font-size:0.8rem;
+                    }
+                }
+                button{
+                    font-size:0.7rem;
+                    padding:0.2rem;
+                    margin-top:0.5rem;
+                }
+                button:hover{
+                    background-color:red;
+                }
+            }
         }
     }
 }
