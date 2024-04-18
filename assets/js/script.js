@@ -27,3 +27,15 @@ const menuFunc =()=>{
     });
     console.log(menu,heading,width);
 }
+
+//item categories
+const itemCategories=(event)=>{
+    const productsBar = document.createElement('div');
+    productsBar.className='product-bar';
+    const items = document.querySelector('.items');
+    productsBar.appendChild(items);
+    const discount =  document.querySelector('.discount');
+    productsBar.appendChild(discount);
+    document.body.appendChild(productsBar);
+    console.log(productsBar);
+}
