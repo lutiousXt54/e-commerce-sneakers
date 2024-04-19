@@ -733,9 +733,124 @@ main > .right > .section{
             width:28vw;
         }
     }
-    /* .product-bar{
-
-    } */
+    .product-bar{
+        position: fixed;
+        width:40%;
+        height:100vh;
+        top:0;
+        bottom:0;
+        left:0;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        padding:1.5rem;
+        z-index:1;
+        background-color: rgb(252, 250, 250);
+        box-shadow:0px 0px 0px 1px rgb(245, 243, 243);
+        .items{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            gap:0.5rem;
+            .heading{
+                height:3.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .h2{
+                    font-size:1.2rem;
+                    font-family:var(--fontFamily);
+                    font-weight:600;
+                    text-transform: uppercase;
+                }
+                .remove{
+                    width:1.5rem;
+                }
+            }
+            .card{
+                width:100%;
+                height:3rem;
+                /* border:solid 1px; */
+                display: flex;
+                flex-direction: column;
+                .box{
+                    width:100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    .sub{
+                        width:fit-content;
+                        display:flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap:0.25rem;
+                        div{
+                            font-size:1.25rem;
+                            text-transform: capitalize;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        }
+                        img{
+                            width:2.5rem;
+                        }
+                    }
+                    img{
+                        width:0.9rem;
+                        margin-right:0.2rem;
+                    }
+                }
+                .swipe-down{
+                    display:none;
+                }
+            }
+        }
+        .discount{
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            .heading{
+                font-size:1.2rem;
+                font-family:var(--fontFamily);
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .card{
+                width:100%;
+                height:4rem;
+                display:flex;
+                flex-direction: row;
+                gap:0.5rem;
+                img{
+                    width:3.5rem;
+                    height:3.5rem;
+                    border-radius:0.5rem;
+                    box-shadow:0px 0px 0px 1px rgb(228, 227, 227);
+                }
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .h4{
+                        font-size:1.1rem;
+                        font-family: var(--fontFamily);
+                        font-weight:550;
+                        text-transform: capitalize;
+                    }
+                    .h5{
+                        font-size:1rem;
+                        font-family: var(--fontFamily);
+                        font-weight:500;
+                        span{
+                            font-size:0.9rem;
+                            text-decoration: line-through;
+                            color:rgb(141, 139, 139);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* for 490px to lowest pixels as possible */
@@ -920,5 +1035,123 @@ main > .right > .section{
         width:100%;
         display: flex;
         flex-direction: column;
+    }
+    .product-bar{
+        position: fixed;
+        width:45%;
+        height:100vh;
+        top:0;
+        bottom:0;
+        left:0;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        padding:1.5rem;
+        z-index:1;
+        background-color: rgb(252, 250, 250);
+        box-shadow:0px 0px 0px 1px rgb(245, 243, 243);
+        .items{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            gap:0.5rem;
+            .heading{
+                height:3.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .h2{
+                    font-size:1.2rem;
+                    font-family:var(--fontFamily);
+                    font-weight:600;
+                    text-transform: uppercase;
+                }
+                .remove{
+                    width:1.5rem;
+                }
+            }
+            .card{
+                width:100%;
+                height:3rem;
+                /* border:solid 1px; */
+                display: flex;
+                flex-direction: column;
+                .box{
+                    width:100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    .sub{
+                        width:fit-content;
+                        display:flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap:0.25rem;
+                        div{
+                            font-size:1.25rem;
+                            text-transform: capitalize;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        }
+                        img{
+                            width:2.5rem;
+                        }
+                    }
+                    img{
+                        width:0.9rem;
+                        margin-right:0.2rem;
+                    }
+                }
+                .swipe-down{
+                    display:none;
+                }
+            }
+        }
+        .discount{
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            .heading{
+                font-size:1.2rem;
+                font-family:var(--fontFamily);
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .card{
+                width:100%;
+                height:4rem;
+                display:flex;
+                flex-direction: row;
+                gap:0.5rem;
+                img{
+                    width:3.5rem;
+                    height:3.5rem;
+                    border-radius:0.5rem;
+                    box-shadow:0px 0px 0px 1px rgb(228, 227, 227);
+                }
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .h4{
+                        font-size:1.1rem;
+                        font-family: var(--fontFamily);
+                        font-weight:550;
+                        text-transform: capitalize;
+                    }
+                    .h5{
+                        font-size:1rem;
+                        font-family: var(--fontFamily);
+                        font-weight:500;
+                        span{
+                            font-size:0.9rem;
+                            text-decoration: line-through;
+                            color:rgb(141, 139, 139);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

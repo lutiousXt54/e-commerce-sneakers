@@ -36,6 +36,21 @@ const itemCategories=(event)=>{
     productsBar.appendChild(items);
     const discount =  document.querySelector('.discount');
     productsBar.appendChild(discount);
+    const heading = items.querySelector('.heading');
+    heading.textContent='';
+    const removeImg = document.createElement('img');
+    removeImg.src='./assets/images/cross.svg';
+    removeImg.className='remove';
+    const head2 = document.createElement('div');
+    head2.className='h2';
+    head2.textContent='categories';
+    heading.appendChild(head2);
+    heading.appendChild(removeImg);
     document.body.appendChild(productsBar);
-    console.log(productsBar);
+    removeImg.addEventListener('click',()=>{
+        productsBar.style.display='none';
+    });
+    event.target.addEventListener('click',()=>{
+        productsBar.style.display='none';
+    });
 }
