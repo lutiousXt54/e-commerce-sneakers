@@ -426,18 +426,20 @@ main > .left > .discount{
     }
 }
 main > .right{
-    width:80%;
+    width:85%;
     display:flex;
-    flex-direction: row;
-    justify-content:space-around;
-    gap:0.5rem;
+    flex-direction: column;
 }
-main > .right > .section{
+main > .right > .top-section{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+main > .right > .top-section > .section{
     min-width:14vw;
     height:fit-content;
     display:flex;
     flex-direction: column;
-    /* border:solid 1px; */
     padding:0.25rem;
     .heading{
         font-size:1.25rem;
@@ -516,6 +518,159 @@ main > .right > .section{
         .card:nth-child(even){
             grid-column:2/3;
             margin-right:1rem;
+        }
+    }
+}
+main > .right > .offer{
+    width:100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-family:var(--fontFamily);
+    padding:0.5rem;
+    gap:1.5rem;
+    overflow:scroll hidden;
+    scroll-snap-type:inline mandatory;
+    overscroll-behavior-inline:contain;
+    .h2{
+        height:2rem;
+        border-bottom:solid 1px rgb(180, 177, 177);
+        font-size:1.25rem;
+        font-weight:600;
+        text-transform: capitalize;
+    }
+    .products{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        gap:0.5rem;
+        scroll-snap-align: start;
+        .container{
+            width:100%;
+            display:flex;
+            flex-direction: row;
+            border:solid 1px rgb(201, 199, 199);
+            border-radius:0.8rem;
+            gap:1rem;
+            overflow: hidden;
+            object-fit: cover;
+            /* padding:0.5rem; */
+            /* overflow:hidden; */
+            img{
+                width:50%;
+                border-radius:1rem;
+            }
+            .text-offer{
+                width:50%;
+                height: 100%;
+                display:flex;
+                flex-direction: column;
+                justify-content:space-evenly;
+                .describe{
+                    height:60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .h4{
+                        font-size:1.1rem;
+                        font-weight:600;
+                        text-transform: uppercase;
+                    }
+                    .p{
+                        font-size:1rem;
+                        color:rgb(136, 133, 133);
+                    }
+                    .h3{
+                        font-size:1.15rem;
+                        font-weight:600;
+                        color:rgb(250, 79, 79);
+                        span{
+                            font-size:1rem;
+                            text-decoration:line-through;
+                            color:rgb(136, 133, 133);
+                            font-weight:500;
+                        }
+                    }
+                    button{
+                        width:fit-content;
+                        font-size:0.85rem;
+                        text-transform: uppercase;
+                        padding:0.3rem;
+                        font-weight:600;
+                        color:white;
+                        border:none;
+                        background-color:rgb(248, 79, 79);
+                        border-radius:0.25rem;
+                    }
+                    button:hover{
+                        background-color: black;
+                        cursor: pointer;
+                    }
+                }
+                .count{
+                    width:100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.2rem;
+                    .sold{
+                        width:95%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content:space-between;
+                        div{
+                            font-size:0.9rem;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .count-bar{
+                        width:95%;
+                        height:0.25rem;
+                        border-radius:0.6rem;
+                        background-color:rgb(228, 228, 228);
+                        padding:0.15rem;
+                        .fill{
+                            width:60%;
+                            height:100%;
+                            border-radius:0.6rem;
+                            background-color:rgb(252, 88, 88);
+                        }
+                    }
+                    .days-count{
+                        display:flex;
+                        flex-direction: column;
+                        .p{
+                            font-size:1rem;
+                            font-weight:600;
+                            text-transform: uppercase;
+                        }
+                        .time{
+                            width:100%;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            .card{
+                                width:15%;
+                                height:fit-content;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding:0.25rem;
+                                border-radius:12.5%;
+                                background-color:rgb(235, 232, 232);
+                                .num{
+                                    font-size:1.25rem;
+                                    font-weight:600;
+                                }
+                                .text-time{
+                                    font-size:1rem;
+                                    font-weight:500;
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -729,8 +884,11 @@ main > .right > .section{
     main > .right{
         width:100%;
         justify-content: space-around;
-        .section > .flex-container > .card{
-            width:28vw;
+        .top-section{
+            width:100%;
+            .section > .flex-container > .card{
+                width:28vw;
+            }
         }
     }
     .product-bar{
@@ -1035,6 +1193,10 @@ main > .right > .section{
         width:100%;
         display: flex;
         flex-direction: column;
+        .top-section{
+            display: flex;
+            flex-direction: column;
+        }
     }
     .product-bar{
         position: fixed;
