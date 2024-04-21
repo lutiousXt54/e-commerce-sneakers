@@ -434,6 +434,7 @@ main > .right > .top-section{
     width:100%;
     display: flex;
     flex-direction: row;
+    gap:1rem;
 }
 main > .right > .top-section > .section{
     min-width:14vw;
@@ -441,6 +442,7 @@ main > .right > .top-section > .section{
     display:flex;
     flex-direction: column;
     padding:0.25rem;
+    /* gap:2rem; */
     .heading{
         font-size:1.25rem;
         margin-left:0.25rem;
@@ -451,19 +453,19 @@ main > .right > .top-section > .section{
         padding:0.5rem;
     }
     .flex-container{ 
-        min-width: 100%;
+        width: 100%;
         height:40vh;
         display: grid;
         grid-template-columns:repeat(1fr,2);
         grid-template-rows:repeat(3.8rem,4);
         align-items:center;
-        column-gap:7%;
+        gap:9%;
         padding:0.25rem;
         overflow-x:scroll;
         scroll-snap-type:inline mandatory;
         overscroll-behavior-inline:contain;
         .card{
-            min-width:24vw;
+            min-width:23vw;
             height:3.8rem;
             display: flex;
             flex-direction: row;
@@ -676,12 +678,14 @@ main > .right > .offer{
 }
 .new-product{
     width:var(--compWidth);
+    height: fit-content;
     font-family:var(--fontFamily);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content:space-between;
-    gap:2rem;
+    justify-content: center;
+    gap:2.5rem;
+    padding:1rem;
     .card{
         position: relative;
         width:11rem;
@@ -705,11 +709,15 @@ main > .right > .offer{
         }
         .sale{
             position: absolute;
-            top:1rem;
-            left:1rem;
+            top:0.5rem;
+            left:0.5rem;
             width:fit-content;
-            transform: rotate(-45deg);
+            padding:0.1rem;
             border:solid 1px;
+            border-radius:0.25rem;
+            background-color:black;
+            color:white;
+            font-weight:600;
         }
         .pop-up{
             display:none;
@@ -748,12 +756,11 @@ main > .right > .offer{
     .card:hover{
         box-shadow:0px 0px 5px rgb(199, 196, 196);
         .pop-up{
-            width:4rem;
+            width:5rem;
             position: absolute;
             right:0.5rem;
             top:0.25rem;
             width:10%;
-            /* border:1px solid; */
             display: flex;
             flex-direction: column;
             gap:0.5rem;
@@ -1300,7 +1307,7 @@ main > .right > .offer{
     }
     .product-bar{
         position: fixed;
-        width:45%;
+        width:60%;
         height:100vh;
         top:0;
         bottom:0;
@@ -1458,5 +1465,69 @@ main > .right > .offer{
                 }
             }
         }
+    }
+    .new-product{
+        overflow:none;
+        .card{
+            width:100%;
+            img{
+                width:100%;
+            }
+            .text{
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                gap:0.25rem;
+                .h3{
+                    font: size 1.05em;
+                    text-transform: uppercase;
+                    font-weight:600;
+                    color:rgb(253, 65, 65);
+                }
+                .p{
+                    font-size:0.9rem;
+                    color:rgb(112, 112, 112);
+                    text-transform: capitalize;
+                }
+                .h4{
+                    font-size:1rem;
+                    font-weight:600;
+                    word-spacing:0.5rem;
+                    span{
+                        color:rgb(155, 151, 151);
+                        font-weight:500;
+                        text-decoration:line-through;
+                    }
+                }
+            }
+        }
+        .card:hover{
+            box-shadow:0px 0px 5px rgb(199, 196, 196);
+            .pop-up{
+                width:1rem;
+                position: absolute;
+                right:0.5rem;
+                top:0.25rem;
+                width:10%;
+                display: flex;
+                flex-direction: column;
+                gap:0.5rem;
+                img{
+                    width:100%;
+                    background-color:whitesmoke;
+                    border-radius:0.25rem;
+                    padding:0.1rem;
+                    box-shadow:0px 0px 0px 1px rgb(240, 238, 238);
+                }
+                img:active{
+                    opacity:0.1;
+                    filter:invert(100%);
+                }
+                img:hover{
+                    filter: none;
+                }
+            }
+        }
+    
     }
 }
