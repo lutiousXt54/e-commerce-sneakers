@@ -54,3 +54,7 @@ const itemCategories=(event)=>{
         productsBar.style.display='none';
     });
 }
+
+function timer(){
+    
+}
