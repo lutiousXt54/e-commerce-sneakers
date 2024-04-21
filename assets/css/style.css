@@ -703,6 +703,14 @@ main > .right > .offer{
             top:0.25rem;
             left: 0.25rem;
         }
+        .sale{
+            position: absolute;
+            top:1rem;
+            left:1rem;
+            width:fit-content;
+            transform: rotate(-45deg);
+            border:solid 1px;
+        }
         .pop-up{
             display:none;
         }
@@ -1180,6 +1188,7 @@ main > .right > .offer{
         }
     }
     .nav-lower{
+        z-index:1;
         position: fixed;
         bottom:0;
         width:100%;

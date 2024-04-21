@@ -72,6 +72,42 @@ function hoverChange(){
         {
             img:'./assets/images/products/jacket-5.jpg',
             hoverimg:'./assets/images/products/jacket-6.jpg'
+        },
+        {
+            img:'./assets/images/products/clothes-3.jpg',
+            hoverimg:'./assets/images/products/clothes-4.jpg'
+        },
+        {
+            img:'./assets/images/products/shoe-2.jpg',
+            hoverimg:'./assets/images/products/shoe-2_1.jpg'
+        },
+        {
+            img:'./assets/images/products/watch-3.jpg',
+            hoverimg:'./assets/images/products/watch-4.jpg'
+        },
+        {
+            img:'./assets/images/products/party-wear-1.jpg',
+            hoverimg:'./assets/images/products/party-wear-2.jpg'
+        },
+        {
+            img:'./assets/images/products/watch-1.jpg',
+            hoverimg:'./assets/images/products/watch-2.jpg'
+        },
+        {
+            img:'./assets/images/products/shoe-4.jpg',
+            hoverimg:'./assets/images/products/shoe-5.jpg'
+        },
+        {
+            img:'./assets/images/products/sports-2.jpg',
+            hoverimg:'./assets/images/products/sports-4.jpg'
+        },
+        {
+            img:'./assets/images/products/shoe-1.jpg',
+            hoverimg:'./assets/images/products/shoe-1_1.jpg'
+        },
+        {
+            img:'./assets/images/products/clothes-1.jpg',
+            hoverimg:'./assets/images/products/clothes-2.jpg'
         }
     ];
     let newProduct = document.querySelector('.new-product');
