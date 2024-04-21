@@ -58,3 +58,35 @@ const itemCategories=(event)=>{
 function timer(){
     
 }
+
+function hoverChange(){
+    const imgs = [
+        {
+            img:'./assets/images/products/jacket-3.jpg',
+            hoverimg:'./assets/images/products/jacket-4.jpg'
+        },
+        {
+            img:'./assets/images/products/shirt-1.jpg',
+            hoverimg:'./assets/images/products/shirt-2.jpg'
+        },
+        {
+            img:'./assets/images/products/jacket-5.jpg',
+            hoverimg:'./assets/images/products/jacket-6.jpg'
+        }
+    ];
+    let newProduct = document.querySelector('.new-product');
+    const cards = newProduct.querySelectorAll('.card');
+    Object.values(cards).forEach((e)=>{
+        e.addEventListener('mouseover',()=>{
+            const index = Object.values(cards).indexOf(e);
+            const hover = e.querySelector('.logo');
+            hover.src=imgs[index].hoverimg;
+        });
+        e.addEventListener('mouseout',()=>{
+            const index = Object.values(cards).indexOf(e);
+            const hover = e.querySelector('.logo');
+            hover.src=imgs[index].img;
+        });
+    })
+}
+hoverChange()
